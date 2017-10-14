@@ -2,7 +2,13 @@
   "name": "canvas-playground",
   "version": "1.0.0",
   "description": "Messing around with the Canvas API.",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Daniel Zelaya <wupaz9@gmail.com> (https://github.com/danielzy95)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "cd src && browser-sync start -s -f '**/*, *' --port 3000"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
 }
