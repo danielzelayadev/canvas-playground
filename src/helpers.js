@@ -7,7 +7,7 @@ const render = template =>
       resolve();
     });
 
-    xhttp.addEventListener("error", reject);
+    xhttp.addEventListener("error", e => reject(template));
 
     xhttp.open("GET", `templates/${template}.html`);
     xhttp.send();
