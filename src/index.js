@@ -14,9 +14,14 @@ function onCanvasFormSubmit(e) {
 
 function setupCanvas(w = 0, h = 0) {
   const canvas = document.querySelector("canvas");
+  const ctx = canvas.getContext("2d");
 
   canvas.setAttribute("width", w.toString());
   canvas.setAttribute("height", h.toString());
+  canvas.style = "border: 1px solid #000";
+
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(30, 60, 400, 300);
 }
 
 render("canvas-form")
