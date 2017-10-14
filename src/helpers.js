@@ -1,7 +1,14 @@
-const ajax = new XMLHttpRequest();
+const render = (() => {
+  const xhttp = new XMLHttpRequest();
+  const body  = document.querySelector("body");
 
-ajax.addEventListener("load", requestListener);
-
-function requestListener() {
-  console.log(this.responseText);
-}
+  function requestListener() {
+    body.innerHTML = this.response;
+  }
+  
+  return template => {
+    xhttp.addEventListener("load", requestListener);
+    xhttp.open("GET", `templates/${template}.html`);
+    xhttp.send();
+  }
+})();
