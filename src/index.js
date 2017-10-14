@@ -1,6 +1,6 @@
 function onCanvasFormSubmit(e) {
-  const width  = Number(document.querySelector("#width-input").nodeValue);
-  const height = Number(document.querySelector("#height-input").nodeValue);
+  const width  = document.querySelector("#width-input").value;
+  const height = document.querySelector("#height-input").value;
 
   e.preventDefault();
 
