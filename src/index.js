@@ -24,10 +24,14 @@ function setupCanvas(w = 0, h = 0) {
   ctx.fillRect(30, 60, 400, 300);
 }
 
-render("canvas-form")
-  .then(() => {
-    document
-      .querySelector("form")
-      .addEventListener("submit", onCanvasFormSubmit);
-  })
-  .catch(renderError);
+function renderCanvasForm() {
+  render("canvas-form")
+    .then(() => {
+      document
+        .querySelector("form")
+        .addEventListener("submit", onCanvasFormSubmit);
+    })
+    .catch(renderError);
+}
+
+renderCanvasForm();
