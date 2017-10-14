@@ -32,14 +32,16 @@ function setupCanvas(w = 0, h = 0) {
       x -= speed;
     if (e.key == "s")
       y += speed;
-      
-    renderPlayer(ctx, x, y);
   });
 
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(30, 60, 400, 300);
-
-  renderPlayer(ctx, x, y);
+  setInterval(() => {
+    ctx.clearRect(0, 0, w, h);
+    
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(30, 60, 400, 300);
+  
+    renderPlayer(ctx, x, y);
+  }, 1);
 }
 
 function renderPlayer(ctx, x, y) {
