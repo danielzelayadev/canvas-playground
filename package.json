@@ -1,0 +1,8 @@
+{
+  "name": "canvas-playground",
+  "version": "1.0.0",
+  "description": "Messing around with the Canvas API.",
+  "main": "index.js",
+  "author": "Daniel Zelaya <wupaz9@gmail.com> (https://github.com/danielzy95)",
+  "license": "MIT"
+}
